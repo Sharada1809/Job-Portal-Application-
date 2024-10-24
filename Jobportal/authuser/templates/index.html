@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobmela Application</title>
+    <link rel="stylesheet" href="style.css">
+
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'CSSFiles/styles.css' %}">  
+    {% include "navbar.html" %}
+    <style>
+       
+        footer {
+            background-color: #494747;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animation Styles */
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animated {
+            animation: slideInFromLeft 1s ease-in-out;
+        }
+
+        /* Additional Styling */
+        
+        .section {
+            padding: 25px 0;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section.dark {
+            background-color: #ffffffff;
+            color: #030303;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            display: inline;
+        }
+        
+        .footer-links li:not(:last-child) {
+            margin-right: 15px;
+        }
+        
+        .footer-links li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer-links li a:hover {
+            text-decoration: underline;
+        }
+    
+        .search-container {
+            position: relative;
+        }
+    
+        .search-container input[type="text"] {
+            width: 700px;
+            height: 60px;
+            padding: 20px;
+            border: 2.5px solid #000;
+            border-radius: 35px;
+            outline: none;
+            font-size: 16px;
+        }
+       
+    </style>   
+
+</head>
+
+<body>
+    <main>
+        
+        <section class="section animated">
+            <br><center><section>
+
+                <div class="search-container">
+                    <input type="text" placeholder="Search for jobs...">
+                </div>
+    
+            </section></center><br>
+            <h2>Welcome to our Jobmela Portal</h2>
+            <p>Find your dream job today!</p>
+        </section>
+
+
+        <section class="section animated">
+            <p> Welcome to our Jobmela portal application, where opportunities meet aspirations! Discovering the right job
+                can often feel like finding a needle in a haystack, especially in today's AI-driven landscape. Our
+                platform is designed to simplify this process by providing a user-friendly interface, personalized job
+                recommendations, and a vast database of employment opportunities across various industries. We
+                understand the importance of finding meaningful work that aligns with your skills and ambitions, which
+                is why we strive to connect you with companies that value your talents. With just a few clicks, you can
+                explore a multitude of job listings, apply seamlessly, and take the next step towards your dream career.
+                Join us and let's embark on this journey together towards professional fulfillment!</p>
+           
+                
+        </section>
+
+
+    </main>    
+
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+    
+
+
+</body>
+
+</html>

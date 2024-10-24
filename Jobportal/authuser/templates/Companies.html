@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobmela Companies</title>
+  {% load static %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'CSSFiles/styles.css' %}">
+  {% include "navbar.html" %}
+  <style>
+    .Data {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+    .container {
+      max-width: 1000px;
+      margin: 15px auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 5px;
+    }
+
+    .company {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .company h2 {
+      margin-top: 0;
+    }
+
+    .company-logo {
+      width: 150px;
+      height: 100px;
+      margin: 20px auto;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <main>
+
+    <br>
+    <section class="Data">
+      <p>In today's dynamic business landscape, finding the right talent is imperative for companies to thrive and
+        innovate. At our jobmela application, we offer a unique platform where companies can seamlessly collaborate
+        with us to discover exceptional candidates who perfectly match their requirements. Our portal serves as a
+        gateway to a vast pool of talent, ranging from seasoned professionals to fresh graduates, spanning across
+        various industries and skill sets. Through our advanced filtering and matching algorithms, companies can
+        streamline their recruitment process, saving valuable time and resources. Whether it's filling crucial executive
+        positions or hiring for specialized roles, our platform empowers companies to connect with top-tier talent
+        efficiently and effectively. We understand the challenges companies face in today's competitive market, which is
+        why we offer a range of customizable solutions tailored to their specific needs. From job postings and applicant
+        tracking to candidate assessment and onboarding support, our comprehensive suite of services caters to every
+        stage of the hiring process. Moreover, our commitment to data security and confidentiality ensures that
+        companies can trust us with their sensitive information. By partnering with us, companies gain access to a
+        robust ecosystem of talent acquisition tools and resources designed to enhance their recruitment efforts. Our
+        dedicated team of experts is always on hand to provide personalized assistance and guidance, ensuring a seamless
+        experience for both companies and candidates alike. Whether you're a small startup or a multinational
+        corporation, our jobmela application offers unparalleled access to talent, enabling companies to build
+        high-performing teams that drive success and innovation. Join us today and discover the difference that
+        collaboration can make in shaping the future of your organization.</p>
+    </section><br>
+
+    <center>
+      <h2>List of Companies which are collaborate with us</h2>
+    </center>
+
+
+    <section>
+      <div class="container">
+        <div class="company">
+          <center><a href="https://about.google/"><img class="company-logo"
+                src="https://freelogopng.com/images/all_img/1657955079google-icon-png.png" alt="Google"></a>
+            <h2>Google</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.microsoft.com/en-in/about"><img class="company-logo"
+                src="data:image/png;base64,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"
+                alt="Microsoft"></a>
+            <h2>Microsoft</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.aboutamazon.eu/"><img class="company-logo"
+                src="https://www.freepnglogos.com/uploads/amazon-png-logo-vector/amazon-png-logo-vector-1.png"
+                alt="amazon"></a>
+            <h2>amazon</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.wipro.com/about-us/"><img class="company-logo"
+                src="https://1000logos.net/wp-content/uploads/2021/05/Wipro-logo.png" alt="wipro"></a>
+            <h2>wipro</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.infosys.com/about/history.html"><img class="company-logo"
+                src="https://cdn.iconscout.com/icon/free/png-256/free-infosys-2850045-2370783.png" alt="Infosys"></a>
+            <h2>Infosys</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.ibm.com/in-en/about"><img class="company-logo"
+                src="https://www.investopedia.com/thmb/nacc2lWiQKdCLKjiTXseIjw4aJk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ibm-logo-3-56a81a2c3df78cf7729c1f61.jpg"
+                alt="IBM"></a>
+            <h2>IBM</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.tata.com/about-us"><img class="company-logo"
+                src="https://i.pinimg.com/originals/5b/ac/94/5bac942d02e70ce67498bf2ff04efe97.png" alt="TATA"></a>
+            <h2>TATA</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www2.deloitte.com/uk/en/legal/about-deloitte.html"><img class="company-logo"
+                src="https://cdn.freebiesupply.com/logos/large/2x/deloitte-logo-png-transparent.png"
+                alt="Deloitte "></a>
+            <h2>Deloitte</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://about.fb.com/company-info./"><img class="company-logo"
+                src="data:image/png;base64,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"
+                alt="Facebook"></a>
+            <h2>Facebook</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://about.instagram.com/about-us"><img class="company-logo"
+                src="https://imageio.forbes.com/specials-images/imageserve/5734a3d8a7ea4353698dee16/960x960.jpg?height=400&width=400&fit=bounds"
+                alt="Instagram"></a>
+            <h2>Instagram </h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://corporate.ford.com/about.html"><img class="company-logo"
+                src="https://logos-world.net/wp-content/uploads/2021/05/Ford-Logo.png" alt="Ford"></a>
+            <h2>Ford</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.tesla.com/about"><img class="company-logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png" alt="Tesla"></a>
+            <h2>Tesla</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://brands.flipkart.com/catapult-about"><img class="company-logo"
+                src="https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Emblem.png" alt="Flipkart"></a>
+            <h2>Flipkart</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://developer.twitter.com/en"><img class="company-logo"
+                src="https://static.vecteezy.com/system/resources/thumbnails/027/395/710/small/twitter-brand-new-logo-3-d-with-new-x-shaped-graphic-of-the-world-s-most-popular-social-media-free-png.png"
+                alt="X(Twitter)"></a>
+            <h2>X(Twitter)</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://hcl.com/about/"><img class="company-logo"
+                src="https://download.logo.wine/logo/HCL_Technologies/HCL_Technologies-Logo.wine.png" alt="HCL"></a>
+            <h2>HCL</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.accenture.com/in-en/about/company-index"><img class="company-logo"
+                src="https://1000logos.net/wp-content/uploads/2016/10/Colors-Accenture-logo.jpg" alt="Accenture"></a>
+            <h2>Accenture</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.virgin.com/about-virgin/virgin-group"><img class="company-logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Virgin-logo.svg/2341px-Virgin-logo.svg.png"
+                alt="Virgin"></a>
+            <h2>Virgin</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.coca-colacompany.com/about-us"><img class="company-logo"
+                src="https://brandongaille.com/wp-content/uploads/2014/04/List-of-the-20-Best-Multinational-Company-Logos.jpg"
+                alt="Coca cola"></a>
+            <h2>Coca cola</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.techmahindra.com/en-in/techmahindra-overview/"><img class="company-logo"
+                src="https://www.theclimatepledge.com/content/dam/amazonclimatepledge/signatory-logo/2022/Tech_Mahindra.png"
+                alt="Tech Mahindra"></a>
+            <h2>Tech Mahindra</h2>
+          </center>
+        </div>
+        <div class="company">
+          <center><a href="https://www.adidas-group.com/en/about/profile"><img class="company-logo"
+                src="https://s3.amazonaws.com/cdn.designcrowd.com/blog/100-Famous-Brand%20Logos-From-The-Most-Valuable-Companies-of-2020/Adidas.png"
+                alt="adidas"></a>
+            <h2>adidas</h2>
+          </center>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>

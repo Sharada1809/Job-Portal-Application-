@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  {% include 'cnavbar.html' %}
+
+  <style>
+
+.content {
+  margin-left: 0rem;
+  width: 68rem; 
+
+}
+
+
+.job-listings {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: calc(100% - 220px);
+  margin: 0 auto;
+  padding: 1px;
+}
+
+/* ... Existing job card styles ... */
+
+.job-listings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.job-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: auto;
+  margin: 20px;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.active-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #FFD700;
+  color: black;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.job-location {
+  color: #777777;
+}
+
+.job-details p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.apply-button {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  background-color: #00FFFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.apply-button:hover {
+  background-color: #00CED1;
+}
+
+  </style>
+</head>
+<body>
+
+  <main>
+  <div class="content">
+    <div class="job-listings">
+      {% for job in jobpost %}
+        <div class="job-card">
+          <div class="active-tag" ><b>Active</b></div>
+          <br><br>
+          <div class="job-header">
+            <h3 >{{job.title}}</h3>
+          </div>
+          <div class="job-details">
+            <span class="job-location" >Location: {{job.address}}</span>
+            <p>Company: {{job.companyName}}</p>
+            <p>Salary: ${{job.salaryLow}} - ${{job.salaryHigh}}</p>
+            <p>Last Date: {{job.lastDateToApply}}</p>
+          </div>
+          <a class="apply-button" href="{% url 'candidate:applyJob' job.id %}" style="text-decoration: none;
+            color: inherit;">Apply Now</a>
+        </div>
+       {% endfor %}
+        <!-- Add more job cards here -->
+    </div>
+  </div>
+</main>
+</body>
+</html>
