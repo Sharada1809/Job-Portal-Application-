@@ -26,9 +26,9 @@ The Job Portal Application serves as a bridge between job seekers and employers,
 1. Clone the repository:
    ```bash
 
-   Navigate into the project directory:
+2. Navigate into the project directory:
 
-cd Job-Portal-Application-
+  cd Job-Portal-Application-
 
 
 ## Set up a virtual environment:
