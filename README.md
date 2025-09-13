@@ -24,7 +24,8 @@ The Job Portal Application serves as a bridge between job seekers and employers,
 ## ⚙️ Installation Instructions
 
 1. Clone the repository:
-   ```bash git clone https://github.com/Sharada1809/Job-Portal-Application-.git
+
+  git clone https://github.com/Sharada1809/Job-Portal-Application-.git
 
 2. Navigate into the project directory:
 
